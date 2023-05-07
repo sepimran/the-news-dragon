@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, ListGroup } from 'react-bootstrap';
 import { FaGoogle ,FaGithub ,FaFacebook ,FaTwitter , FaInstagram  } from 'react-icons/fa';
+import QZone from '../QZone/QZone';
 
 const RightNav = () => {
     return (
@@ -11,13 +12,17 @@ const RightNav = () => {
                 <Button variant="d-block w-100 border border-dark text-dark"><FaGithub /> Secondary</Button>
             </div>
 
-            <div className="single-sidebar-item">
+            <div className="single-sidebar-item mb-4">
                 <h4 className='mb-3'>Find Us On</h4>
                 <ListGroup>
                     <ListGroup.Item> <FaFacebook /> Facebook</ListGroup.Item>
                     <ListGroup.Item> <FaTwitter />Twitter</ListGroup.Item>
                     <ListGroup.Item> <FaInstagram /> Instagram</ListGroup.Item>
                 </ListGroup>
+            </div>
+
+            <div className="single-sidebar-item">
+                <QZone></QZone>
             </div>
         </sidebar>
     );
