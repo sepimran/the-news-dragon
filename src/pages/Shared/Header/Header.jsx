@@ -2,12 +2,13 @@ import React, { memo } from 'react';
 import logo from '../../../assets/logo.png'
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import { Button, Col, Container, Nav, NavDropdown,  Navbar, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import Marquee from 'react-fast-marquee';
 
-const Header = memo(() => {
+
+const Header = memo(() => {    
     return (
-        <header className='py-5'>
+        <header className='py-5 pb-3'>
             <Container>
                 <Row>
                     <Col lg={12}>
@@ -26,29 +27,6 @@ const Header = memo(() => {
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus commodi eaque accusantium optio .... 
 
                             </Marquee>
-                        </div>
-
-                        <div className="navigation-area">
-                        <Navbar collapseOnSelect expand="lg" bg="white" variant="white">
-                            <Container>
-                        
-                                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                                <Navbar.Collapse id="responsive-navbar-nav">
-                                <Nav className="m-auto">
-                                    <Nav.Link href="#features">Home</Nav.Link>
-                                    <Nav.Link href="#pricing">About</Nav.Link>
-                                    <Nav.Link href="#pricing">Career</Nav.Link>
-    
-                                </Nav>
-                                <Nav className='align-items-center'>
-                                    <Nav.Link href="#deets">Profile</Nav.Link>
-                                    <Nav.Link eventKey={2} href="#memes">
-                                        <Button variant="secondary">Sign In</Button>
-                                    </Nav.Link>
-                                </Nav>
-                                </Navbar.Collapse>
-                            </Container>
-                        </Navbar>
                         </div>
                     </Col>
                 </Row>

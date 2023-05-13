@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import HomeInsideEditor from '../../Home/HomeInsideEditor/HomeInsideEditor';
 
 const LeftNav = () => {
     const [categories , setCategories] = useState([]);
@@ -21,6 +22,8 @@ const LeftNav = () => {
                     <Link to={`/category/${category.id}`} className='text-decoration-none text-dark'>{category.name}</Link>
                 </p>)
             }
+
+            <HomeInsideEditor></HomeInsideEditor>
             
         </div>
     );

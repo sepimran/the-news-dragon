@@ -5,7 +5,8 @@ import QZone from '../QZone/QZone';
 
 const RightNav = () => {
     return (
-        <sidebar className="sidebar-area">
+        <div className="sidebar-area">
+            
             <div className="single-sidebar-item mb-4">
                 <h4 className='mb-3'>Login With</h4>
                 <Button className='d-block w-100 border mb-2 border-primary text-primary' variant="light"> <FaGoogle /> Primary</Button>
@@ -24,7 +25,7 @@ const RightNav = () => {
             <div className="single-sidebar-item">
                 <QZone></QZone>
             </div>
-        </sidebar>
+        </div>
     );
 };
 

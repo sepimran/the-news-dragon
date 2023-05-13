@@ -59,3 +59,30 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.author-details {
+  position: relative;
+  padding-left: 80px;
+  min-height: 60px;
+}
+
+.author-details img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+
+
+
+.author-details h4 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.author-details p {
+  margin: 0;
+}
