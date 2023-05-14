@@ -8,9 +8,6 @@ const Category = () => {
     return (
         <div>
             {
-                categoryNews.map(n=> console.log(n))
-            }
-            {
                 categoryNews.map(news => <NewsCard 
                     key={news._id}
                     news={news}

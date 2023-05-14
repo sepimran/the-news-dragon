@@ -4,7 +4,8 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import moment from 'moment/moment';
 import { FaEye, FaRegBookmark, FaRegStar, FaRegStarHalf, FaShareAlt, FaStar  } from 'react-icons/fa';
-import Rating from 'react-rating';
+import '@smastrom/react-rating/style.css'
+import { Rating } from '@smastrom/react-rating'
 
 
 const NewsCard = ({news}) => {
@@ -34,14 +35,9 @@ const {title ,image_url ,author,details ,_id , rating,total_view} = news ;
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="text-muted d-flex align-items-center">
-                <div className='flex-grow-1'>
-                <Rating className='me-2'
-                    placeholderRating={rating.number}
-                    emptySymbol={<FaRegStar/>}
-                    placeholderSymbol={<FaStar className='text-warning'/>}
-                    fullSymbol={<FaStar/>}
-                />
-                    {rating.number}
+                <div className='d-flex flex-grow-1 align-items-center'>
+                    <Rating style={{ maxWidth: 150 }} value={rating} readOnly></Rating>
+                    {rating?.number}
                 </div>
                 <div>
                     <FaEye className='me-2'/>
