@@ -36,7 +36,7 @@ const {title ,image_url ,author,details ,_id , rating,total_view} = news ;
             </Card.Body>
             <Card.Footer className="text-muted d-flex align-items-center">
                 <div className='d-flex flex-grow-1 align-items-center'>
-                    <Rating style={{ maxWidth: 150 }} value={rating} readOnly></Rating>
+                    <Rating style={{ maxWidth: 150 }} value={Math.round(rating?.number || 0)} readOnly></Rating>
                     {rating?.number}
                 </div>
                 <div>
