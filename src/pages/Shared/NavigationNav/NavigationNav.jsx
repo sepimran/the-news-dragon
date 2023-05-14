@@ -6,7 +6,11 @@ import { Link } from 'react-router-dom';
 
 const NavigationNav = () => {
 
-    const {user} = useContext(AuthContext);
+    const {user , logOut} = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logOut();
+    }
 
     return (
         <div>
@@ -26,8 +30,8 @@ const NavigationNav = () => {
                         {
                                 user ? 
                                 <>
-                                    <FaUserCircle style={{fontSize: '2rem', marginRight: '10px'}}/>
-                                    <Button variant="secondary">Logout</Button>
+                                    {user.email}<FaUserCircle style={{fontSize: '2rem', marginRight: '10px'}}/>
+                                    <Button onClick={() => handleLogout()} variant="secondary">Logout</Button>
                                 </> :
                                 <>
                                     <Link to="/login">
